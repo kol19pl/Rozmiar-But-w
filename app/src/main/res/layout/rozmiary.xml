@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Europa:"
+        android:text="@string/europarozmiar"
         android:textAlignment="textStart"
 
         android:textSize="24sp"
@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="US :"
+        android:text="@string/usrozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexUs"
@@ -36,13 +36,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="CHINY:  "
+        android:text="@string/chinyrozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexChiny"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/ukrozmiar"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/TexUk"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/TexEuropa"
@@ -78,19 +91,6 @@
         app:layout_constraintTop_toBottomOf="@+id/TexJaponia" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="UK:"
-        android:textAlignment="textStart"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/TexUk"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
         android:id="@+id/TexUk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Rosja :"
+        android:text="@string/rosjarozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexRosja"
@@ -129,7 +129,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Centymetry :"
+        android:text="@string/centymetryrozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexCentymetry"
@@ -141,7 +141,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Mondopoint :"
+        android:text="@string/mondopointrozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         android:visibility="invisible"
@@ -155,7 +155,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Japonia :"
+        android:text="@string/japoniarozmiar"
         android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexJaponia"
@@ -201,7 +201,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="KOREA :"
+        android:text="@string/korearozmiar"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/TexKorea"
         app:layout_constraintStart_toStartOf="parent"

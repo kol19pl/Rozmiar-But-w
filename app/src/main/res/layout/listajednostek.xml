@@ -8,62 +8,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="EUROPA" />
+        android:text="@string/europa" />
 
     <Button
         android:id="@+id/BUS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="US" />
+        android:text="@string/us" />
 
     <Button
         android:id="@+id/BCHINY"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="CHINY" />
+        android:text="@string/chiny" />
 
     <Button
         android:id="@+id/BUK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="UK" />
+        android:text="@string/uk" />
 
     <Button
         android:id="@+id/BROSJA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="ROSJA" />
+        android:text="@string/rosja" />
 
     <Button
         android:id="@+id/BCENTYMETRY"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="CENTYMETRY" />
+        android:text="@string/centymetry" />
 
     <Button
         android:id="@+id/BMONDOPOINT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="MONDOPOINT" />
+        android:text="@string/mondopoint" />
 
     <Button
         android:id="@+id/BJAPONIA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="JAPONIA" />
+        android:text="@string/japonia" />
 
     <Button
         android:id="@+id/BKOREA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_buton"
-        android:text="KOREA" />
+        android:text="@string/korea" />
 
 </LinearLayout>

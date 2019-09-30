@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rozmiar Butów</string>
+    <string name="centymetry">CENTYMETRY</string>
+    <string name="centymetryrozmiar">Centymetry :</string>
+    <string name="chiny">CHINY</string>
+    <string name="chinyrozmiar">CHINY:</string>
+    <string name="damskie">DAMSKIE</string>
+    <string name="dzieci_ce">DZIECIĘCE</string>
+    <string name="europa">Europa</string>
+    <string name="europarozmiar">Europa:</string>
+    <string name="funkcja_eksperymentalna">funkcja eksperymentalna</string>
+    <string name="japonia">JAPONIA</string>
+    <string name="japoniarozmiar">Japonia :</string>
+    <string name="korea">KOREA</string>
+    <string name="korearozmiar">KOREA :</string>
+    <string name="m_skie">MĘSKIE</string>
+    <string name="mondopoint">MONDOPOINT</string>
+    <string name="mondopointrozmiar">Mondopoint :</string>
+    <string name="obs_uga_rozmiar_w_po_rednich">Obsługa rozmiarów pośrednich</string>
+    <string name="ok">OK</string>
+    <string name="przelicz">Przelicz</string>
+    <string name="rosja">ROSJA</string>
+    <string name="rosjarozmiar">Rosja :</string>
+    <string name="uk">UK</string>
+    <string name="ukrozmiar">UK:</string>
+    <string name="us">US</string>
+    <string name="usrozmiar">US :</string>
+    <string name="wybie_jednostki">Wybież jednostkię:</string>
+    <string name="wybie_rozmiar">Wybież rozmiar:</string>
+    <string name="zamykaj_klawiatur_automatycznie">Zamykaj klawiaturę automatycznie</string>
+</resources>

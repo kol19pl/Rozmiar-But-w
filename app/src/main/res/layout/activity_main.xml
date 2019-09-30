@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/blue_buton"
             android:onClick="UstawDamskie"
-            android:text="DAMSKIE" />
+            android:text="@string/damskie" />
 
         <Space
             android:layout_width="15dp"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/blue_buton"
             android:onClick="UstawDziecience"
-            android:text="DZIECIĘCE" />
+            android:text="@string/dzieci_ce" />
 
         <Space
             android:layout_width="15dp"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/gren_button"
             android:onClick="UstawMenskie"
-            android:text="MĘSKIE" />
+            android:text="@string/m_skie" />
 
     </TableRow>
 
@@ -60,9 +60,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:autoText="true"
         android:gravity="center"
-        android:text="Wybież rozmiar:"
+        android:text="@string/wybie_rozmiar"
         android:textAlignment="center"
         android:textSize="18sp"
         app:autoSizeTextType="uniform"
@@ -76,13 +75,16 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:autoText="true"
+        android:accessibilityLiveRegion="polite"
         android:clickable="true"
-        android:editable="true"
         android:ems="10"
         android:enabled="true"
+        android:focusable="true"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
         android:singleLine="true"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableRow" />
 
@@ -94,7 +96,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/blue_buton"
         android:onClick="UstwJednostke"
-        android:text="Europa"
+        android:text="@string/europa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/wejscie"
         app:layout_constraintTop_toBottomOf="@+id/wejscie" />
@@ -108,7 +110,7 @@
         android:layout_marginEnd="60dp"
         android:background="@drawable/blue_buton"
         android:onClick="Przelicz"
-        android:text="Przelicz"
+        android:text="@string/przelicz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bjednostka" />
@@ -146,7 +148,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Wybież jednostkię:"
+        android:text="@string/wybie_jednostki"
         android:textAlignment="center"
         android:textSize="18sp"
         app:autoSizeTextType="uniform"
@@ -176,7 +178,8 @@
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_preferences" />
+        app:srcCompat="@android:drawable/ic_menu_preferences"
+        android:focusable="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
