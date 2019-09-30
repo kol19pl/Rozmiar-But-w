@@ -3,23 +3,35 @@ package com.koltech.rozmiarbutw;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
     public String jednostka = "EUROPA";
 
     Button PJednostka;
+
+    Boolean Autozamykanieklawiatury;
+    Boolean ObslugaPosrenichRozmiarow;
+
+    private SharedPreferences preferences;
+
+
 
 
 
@@ -30,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     Button Kobieta;
     Button Dziecko;
 
-    Boolean sexx = true;
 
     Boolean Menskie = true;
     Boolean Damskie = false;
@@ -46,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     TextView TexJaponia;
     TextView TexKorea;
 
+
+    Switch rozmiaryposrednie;
+    Switch klawiatura;
 
     // 33.0f,34.0f,35.0f,36.0f,37.0f,38.0f
     // 0.0f,0.0f,0.0f,0.0f,0.0f,0.0f
@@ -97,18 +111,36 @@ public class MainActivity extends AppCompatActivity {
     float[] KoRosja =     {  0.0f, 0.0f, 0.0f, 0.0f, 0.0f,35.0f,35.5f,36.0f,36.5f,36.5f,37.0f,37.5f,38.0f,38.5f,38.5f,39.5f,39.5f,40.0f,41.0f};
 
     float temp;
+    private AdView mAdView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        preferences = getSharedPreferences("RozmiarButuwKOL", Context.MODE_PRIVATE);
+        restoreData();
         SetUP();
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+
 
     }
 
 
     public void SetUP(){
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         Wejscie = (EditText) findViewById(R.id.wejscie);
 
@@ -140,9 +172,81 @@ public class MainActivity extends AppCompatActivity {
         TexCentymetry.setText("0");
         TexMondopoint.setText("0");
         TexJaponia.setText("0");
+        TexKorea.setText("0");
 
 
 
+
+
+
+
+
+
+
+        if(ObslugaPosrenichRozmiarow==false){
+           // Wejscie.setInputType(InputType.TYPE_CLASS_NUMBER);
+            Powiadomienie("false");
+        }
+        if(ObslugaPosrenichRozmiarow==true){
+           // Wejscie.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+            Powiadomienie("true");
+        }
+    }
+
+
+
+    public void Ustawienia(View v){
+        setContentView(R.layout.ustawienia);
+        try {
+            rozmiaryposrednie = (Switch) findViewById(R.id.switch1);
+            klawiatura = (Switch) findViewById(R.id.switch2);
+        rozmiaryposrednie.setChecked(ObslugaPosrenichRozmiarow);
+        klawiatura.setChecked(Autozamykanieklawiatury);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void UstawieniaOK(View v){
+
+        ObslugaPosrenichRozmiarow = rozmiaryposrednie.isChecked();
+        Autozamykanieklawiatury   = klawiatura.isChecked();
+        setContentView(R.layout.activity_main);
+        SetUP();
+        saveData();
+
+    }
+
+    private void saveData() {
+        SharedPreferences.Editor preferencesEditor = preferences.edit();
+        //preferencesEditor.putString(PREFERENCES_TEXT_FIELD, editTextData);
+
+       // Switch rozmiaryposrednie = findViewById(R.id.switch1);
+       // Switch klawiatura = findViewById(R.id.switch2);
+      try {
+
+
+          preferencesEditor.putBoolean("Autozamykanieklawiatury",Autozamykanieklawiatury);
+          preferencesEditor.putBoolean("RozmiaryPosrednie",ObslugaPosrenichRozmiarow);
+          preferencesEditor.apply();
+        } catch (Exception e) {
+          Powiadomienie("Błond zapisu Preferencji");
+           e.printStackTrace();
+      }
+    }
+
+    private void restoreData() {
+       // String textFromPreferences = preferences.getString(PREFERENCES_TEXT_FIELD, "");
+       // etToSave.setText(textFromPreferences);
+        try {
+           // Boolean Autozamykanieklawiatury = true;
+           // Boolean ObslugaPosrenichRozmiarow = false;
+            Autozamykanieklawiatury = preferences.getBoolean("Autozamykanieklawiatury",true);
+            ObslugaPosrenichRozmiarow=preferences.getBoolean("RozmiaryPosrednie",false);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
    public void UstawMenskie(View v){
@@ -273,8 +377,11 @@ public class MainActivity extends AppCompatActivity {
 
            if(Menskie){
                if (jednostka == "EUROPA") {
-               if(temp >=39){ PrzeliczObliczenieMenskie();}
-               if(temp < 39){ PrzeliczObliczenieStarszeDziecience();}
+                   try {
+                       if(temp >=39){ PrzeliczObliczenieMenskie();}} catch (Exception e) {
+                       e.printStackTrace();
+                   }
+                   if(temp < 39){ PrzeliczObliczenieStarszeDziecience();}
                if(temp < 32){Powiadomienie("Rozmiar poza tablicą");}
                if(temp > 50){Powiadomienie("Rozmiar poza tablicą");}
                }
@@ -295,7 +402,8 @@ public class MainActivity extends AppCompatActivity {
                    PrzeliczObliczenieMenskie();
                }
                if(jednostka == "KOREA"){
-                   PrzeliczObliczenieMenskie();
+                   if(temp >= 245){ PrzeliczObliczenieMenskie();}
+                   else {Powiadomienie("Rozmiar poza tablicą");}
                }
 
                if(jednostka == "CENTYMETRY"){
@@ -340,7 +448,10 @@ public class MainActivity extends AppCompatActivity {
                    PrzeliczObliczenieDamskie();
                }
                if(jednostka == "KOREA"){
-                   PrzeliczObliczenieDamskie();
+                   if (temp >= KoKorea[0] && temp<=270) {
+                       PrzeliczObliczenieDamskie();
+                   }
+                   else {Powiadomienie("Rozmiar poza tablicą");}
                }
            }
 
@@ -436,10 +547,12 @@ public class MainActivity extends AppCompatActivity {
                 if (jednostka == "EUROPA") {
                    // float temp = Float.parseFloat(Wejscie.getText().toString());
                     for (int i = 0; i <= menskieEu.length; i++) {
+                        Powiadomienie(String.valueOf(temp) + i);
                         if (temp == menskieEu[i]) {
                            // Powiadomienie(String.valueOf(i));
                             UstawMenskie(i);
                         }
+
                     }
                 }
                 if (jednostka == "US") {
