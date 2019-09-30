@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/BEUROPA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="EUROPA" />
+
+    <Button
+        android:id="@+id/BUS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="US" />
+
+    <Button
+        android:id="@+id/BCHINY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="CHINY" />
+
+    <Button
+        android:id="@+id/BUK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="UK" />
+
+    <Button
+        android:id="@+id/BROSJA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="ROSJA" />
+
+    <Button
+        android:id="@+id/BCENTYMETRY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="CENTYMETRY" />
+
+    <Button
+        android:id="@+id/BMONDOPOINT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="MONDOPOINT" />
+
+    <Button
+        android:id="@+id/BJAPONIA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="JAPONIA" />
+
+    <Button
+        android:id="@+id/BKOREA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_buton"
+        android:text="KOREA" />
+
+</LinearLayout>
