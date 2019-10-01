@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Размер обуви</string>
+    <string name="centymetry">САНТИМЕТРАХ</string>
+    <string name="centymetryrozmiar">САНТИМЕТРАХ :</string>
+    <string name="chiny">Китай</string>
+    <string name="chinyrozmiar">Китай :</string>
+    <string name="damskie">ДАМ</string>
+    <string name="dzieci_ce">ДЕТИ</string>
+    <string name="europa">Европа</string>
+    <string name="europarozmiar">Европа</string>
+    <string name="funkcja_eksperymentalna">экспериментальная функция</string>
+    <string name="funkcja_niedostempna">Функция в данный момент недоступна :(</string>
+    <string name="japonia">Япония</string>
+    <string name="japoniarozmiar">Япония :</string>
+    <string name="korea">КОРЕЯ</string>
+    <string name="korearozmiar">КОРЕЯ :</string>
+    <string name="m_skie">MEN</string>
+    <string name="mondopoint">MONDOPOINT</string>
+    <string name="mondopointrozmiar">Mondopoint :</string>
+    <string name="obs_uga_rozmiar_w_po_rednich">Подставка для промежуточных размеров</string>
+    <string name="ok">Да</string>
+    <string name="przelicz">пересчитывать</string>
+    <string name="rosja">РОССИЯ</string>
+    <string name="rosjarozmiar">Россия:</string>
+    <string name="rozmiar_nie_moze_byc_pusty">Размер не может быть пустым!</string>
+    <string name="rozmiar_poza_tablica">Размер вне массива</string>
+    <string name="to_najmiejszy_rosji">самый маленький размер взрослой обуви (в России) !!</string>
+    <string name="to_najwiekszy_rosji">самый большой размер взрослой обуви (в россии) !!</string>
+    <string name="wybie_jednostki">Выберите юнит:</string>
+    <string name="wybie_rozmiar">Выберите размер:</string>
+    <string name="zamykaj_klawiatur_automatycznie">Закройте клавиатуру автоматически</string>
+</resources>

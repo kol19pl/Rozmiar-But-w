@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +28,9 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class MainActivity extends AppCompatActivity {
 
     public String jednostka = "EUROPA";
+
+
+    Animation animbuton;
 
     Button PJednostka;
 
@@ -120,17 +125,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.start);
         preferences = getSharedPreferences("RozmiarButuwKOL", Context.MODE_PRIVATE);
         restoreData();
-        SetUP();
-
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
+        setContentView(R.layout.activity_main);
+        SetUP();
+
+
 
 
 
@@ -165,8 +171,11 @@ public class MainActivity extends AppCompatActivity {
         TexKorea = (TextView) findViewById(R.id.TexKorea);
 
 
+        animbuton = AnimationUtils.loadAnimation(this,R.anim.anim);
 
-        PJednostka.setText(jednostka);
+
+
+        PJednostka.setText(getString(R.string.europa));
         TexEuropa.setText("0");
         TexUs.setText("0");
         TexChiny.setText("0");
@@ -188,11 +197,11 @@ public class MainActivity extends AppCompatActivity {
 
         if(ObslugaPosrenichRozmiarow==false){
             Wejscie.setInputType(InputType.TYPE_CLASS_NUMBER);
-            Powiadomienie("false");
+           // Powiadomienie("false");
         }
         if(ObslugaPosrenichRozmiarow==true){
             Wejscie.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-            Powiadomienie("true");
+          //  Powiadomienie("true");
         }
     }
 
@@ -257,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
         Damskie = false;
         Dzieciece = false;
 
+
        Menszczyzna.setBackground(getResources().getDrawable(R.drawable.gren_button));
        Kobieta.setBackground(getResources().getDrawable(R.drawable.blue_buton));
        Dziecko.setBackground(getResources().getDrawable(R.drawable.blue_buton));
@@ -265,6 +275,8 @@ public class MainActivity extends AppCompatActivity {
         Menskie = false;
         Damskie = true;
         Dzieciece = false;
+
+
         Menszczyzna.setBackground(getResources().getDrawable(R.drawable.blue_buton));
         Kobieta.setBackground(getResources().getDrawable(R.drawable.gren_button));
         Dziecko.setBackground(getResources().getDrawable(R.drawable.blue_buton));
@@ -273,11 +285,16 @@ public class MainActivity extends AppCompatActivity {
         Menskie = false;
         Damskie = false;
         Dzieciece = true;
+
+
         Menszczyzna.setBackground(getResources().getDrawable(R.drawable.blue_buton));
         Kobieta.setBackground(getResources().getDrawable(R.drawable.blue_buton));
         Dziecko.setBackground(getResources().getDrawable(R.drawable.gren_button));
     }
     public void UstwJednostke(View v){
+
+
+        v.startAnimation(animbuton);
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
         View mView = getLayoutInflater().inflate(R.layout.listajednostek, null);
         Button BMONDOPOINT = (Button) mView.findViewById(R.id.BMONDOPOINT);
@@ -301,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "EUROPA";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.europa));
                 dialog.cancel();
             }
         });
@@ -309,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "US";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.us));
                 dialog.cancel();
             }
         });
@@ -317,7 +334,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "CHINY";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.chiny));
                 dialog.cancel();
             }
         });
@@ -325,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "UK";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.uk));
                 dialog.cancel();
             }
         });
@@ -333,7 +350,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "ROSJA";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.rosja));
                 dialog.cancel();
             }
         });
@@ -341,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "CENTYMETRY";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.centymetry));
                 dialog.cancel();
             }
         });
@@ -349,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "MONDOPOINT";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.mondopoint));
                 dialog.cancel();
             }
         });
@@ -357,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "JAPONIA";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.japonia));
                 dialog.cancel();
             }
         });
@@ -365,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 jednostka = "KOREA";
-                PJednostka.setText(jednostka);
+                PJednostka.setText(getString(R.string.korea));
                 dialog.cancel();
             }
         });
@@ -377,6 +394,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void Przelicz(View v){
+        v.startAnimation(animbuton);
         Przeliczex();
         if(Autozamykanieklawiatury==true){
            View view = this.getCurrentFocus();
@@ -393,22 +411,41 @@ public class MainActivity extends AppCompatActivity {
            if(Menskie){
                if (jednostka == "EUROPA") {
                    try {
-                       if(temp >=39){ PrzeliczObliczenieMenskie();}} catch (Exception e) {
+
+
+                       if (temp >= 39 && temp <= 50) {
+                           PrzeliczObliczenieMenskie();
+                       }
+                       if (temp < 39) {
+                           PrzeliczObliczenieStarszeDziecience();
+                       }
+                       if (temp < 32) {
+                           Powiadomienie(getString(R.string.rozmiar_poza_tablica));
+                       }
+                       if (temp > 50) {
+                           Powiadomienie(getString(R.string.rozmiar_poza_tablica));
+                       }
+                   } catch (Exception e) {
                        e.printStackTrace();
                    }
-                   if(temp < 39){ PrzeliczObliczenieStarszeDziecience();}
-               if(temp < 32){Powiadomienie("Rozmiar poza tablicą");}
-               if(temp > 50){Powiadomienie("Rozmiar poza tablicą");}
                }
                if(jednostka == "US"){
+                   try {
                    if(temp >= 6 && temp <15.5f ){PrzeliczObliczenieMenskie();}
                    if(temp < 6) {PrzeliczObliczenieStarszeDziecience();}
-                   if(temp > 15.5f){Powiadomienie("Rozmiar poza tablicą");}
+                   if(temp > 15.5f){Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
+               } catch (Exception e) {
+                   e.printStackTrace();
+               }
                }
                if(jednostka == "UK"){
+                   try {
                    if(temp >= 5.5 && temp <15f ){PrzeliczObliczenieMenskie();}
                    if(temp < 5.5) {PrzeliczObliczenieStarszeDziecience();}
-                   if(temp > 15f){Powiadomienie("Rozmiar poza tablicą");}
+                   if(temp > 15f){Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
+                   } catch (Exception e) {
+                       e.printStackTrace();
+                   }
                }
                if(jednostka == "CHINY"){if(temp>=40.0f){
                    PrzeliczObliczenieMenskie(); }
@@ -418,19 +455,19 @@ public class MainActivity extends AppCompatActivity {
                }
                if(jednostka == "KOREA"){
                    if(temp >= 245){ PrzeliczObliczenieMenskie();}
-                   else {Powiadomienie("Rozmiar poza tablicą");}
+                   else {Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
                }
 
                if(jednostka == "CENTYMETRY"){
                    if(temp >= 25){PrzeliczObliczenieMenskie();}
                    if(temp < 25){PrzeliczObliczenieStarszeDziecience();}
-                   if(temp < 20.4){Powiadomienie("Rozmiar poza tablicą");}
+                   if(temp < 20.4){Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
                }
                if(jednostka == "ROSJA"){
                    if(temp >= 39&&temp <= 45){PrzeliczObliczenieMenskie();}
                    //if(temp < 25){PrzeliczObliczenieStarszeDziecience();}
-                   if(temp < 39){Powiadomienie("Rozmiar poza tablicą. 39 to najmiejszy rozmiar butów dla dorosłych(W Rosji)!!");}
-                   if(temp > 45){Powiadomienie("Rozmiar poza tablicą. 45 to największy rozmiar butów dla dorosłych(W Rosji)!!");}
+                   if(temp < 39){Powiadomienie(getString(R.string.rozmiar_poza_tablica)+". "+getString(R.string.to_najmiejszy_rosji));}
+                   if(temp > 45){Powiadomienie(getString(R.string.rozmiar_poza_tablica)+". 45 "+getString(R.string.to_najwiekszy_rosji));}
                }
 
            }
@@ -439,7 +476,7 @@ public class MainActivity extends AppCompatActivity {
                if(temp <  35){ PrzeliczObliczenieStarszeDziecience();}
                if(temp >= 35&& temp < 44){ PrzeliczObliczenieDamskie();}
                if(temp > 44 && temp < 50 ){ PrzeliczObliczenieMenskie();}
-               if(temp > 50){ Powiadomienie("Rozmiar poza tablicą");}
+               if(temp > 50){ Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
                }
                if(jednostka == "US"){
                    if(temp >= 4){ PrzeliczObliczenieDamskie();}
@@ -450,11 +487,11 @@ public class MainActivity extends AppCompatActivity {
                if(jednostka == "CENTYMETRY"){
                    if(temp >= 22.4){PrzeliczObliczenieDamskie();}
                    if(temp < 27.7){PrzeliczObliczenieMenskie();}
-                   if(temp < 27.7){Powiadomienie("Rozmiar poza tablicą");}
+                   if(temp < 27.7){Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
                }
                if(jednostka == "ROSJA"){
                    if(temp >=35){PrzeliczObliczenieDamskie();}
-                   if(temp > 41){Powiadomienie("Rozmiar poza tablicą 41 to największy rozmiar w Rosji");}
+                   if(temp > 41){Powiadomienie(getString(R.string.rozmiar_poza_tablica)+" 41 "+getString(R.string.to_najwiekszy_rosji));}
                }
                if(jednostka == "CHINY"){if(temp>=40.0f){
                    PrzeliczObliczenieDamskie(); }
@@ -466,7 +503,7 @@ public class MainActivity extends AppCompatActivity {
                    if (temp >= KoKorea[0] && temp<=270) {
                        PrzeliczObliczenieDamskie();
                    }
-                   else {Powiadomienie("Rozmiar poza tablicą");}
+                   else {Powiadomienie(getString(R.string.rozmiar_poza_tablica));}
                }
            }
 
@@ -479,10 +516,10 @@ public class MainActivity extends AppCompatActivity {
                        PrzeliczObliczenieStarszeDziecience();
                    }
                    if (temp > 41) {
-                       Powiadomienie("Rozmiar poza tablicą");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                    if (temp < 16) {
-                       Powiadomienie("Rozmiar poza tablicą");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                }
                if (jednostka == "US") {
@@ -490,7 +527,7 @@ public class MainActivity extends AppCompatActivity {
                        PrzeliczObliczenieDziecience();
                    }
                    if (temp > 13) {
-                       Powiadomienie("Rozmiar poza tablicą");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                }
                if (jednostka == "UK") {
@@ -498,7 +535,7 @@ public class MainActivity extends AppCompatActivity {
                        PrzeliczObliczenieDziecience();
                    }
                    if (temp > 13) {
-                       Powiadomienie("Rozmiar poza tablicą");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                }
                if (jednostka == "CENTYMETRY") {
@@ -509,7 +546,7 @@ public class MainActivity extends AppCompatActivity {
                        PrzeliczObliczenieStarszeDziecience();
                    }
                    if (temp < 26.4) {
-                       Powiadomienie("Rozmiar poza tablicą");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                }
                if (jednostka == "ROSJA") {
@@ -520,20 +557,20 @@ public class MainActivity extends AppCompatActivity {
                        PrzeliczObliczenieStarszeDziecience();
                    }
                    if (temp > 34) {
-                       Powiadomienie("Rozmiar poza tablicą!!!");
+                       Powiadomienie(getString(R.string.rozmiar_poza_tablica));
                    }
                }
                if (jednostka == "CHINY") {
                    if (temp >= 40.0f) {
-                       Powiadomienie("Funkcja aktualnie niedostempna :(");
+                       Powiadomienie(getString(R.string.funkcja_niedostempna));
                    }
                }
                if (jednostka == "JAPONIA") {
-                   Powiadomienie("Funkcja aktualnie niedostempna :(");
+                   Powiadomienie(getString(R.string.funkcja_niedostempna));
                }
 
                if (jednostka == "KOREA") {
-                   Powiadomienie("Funkcja aktualnie niedostempna :(");
+                   Powiadomienie(getString(R.string.funkcja_niedostempna));
                }
            }
 
@@ -543,7 +580,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (NumberFormatException e) {
         e.printStackTrace();
-        Powiadomienie("Rozmiar nie może być pusty!");
+        Powiadomienie(getString(R.string.rozmiar_nie_moze_byc_pusty));
     }
 
     }
@@ -562,7 +599,6 @@ public class MainActivity extends AppCompatActivity {
                 if (jednostka == "EUROPA") {
                    // float temp = Float.parseFloat(Wejscie.getText().toString());
                     for (int i = 0; i <= menskieEu.length; i++) {
-                        Powiadomienie(String.valueOf(temp) + i);
                         if (temp == menskieEu[i]) {
                            // Powiadomienie(String.valueOf(i));
                             UstawMenskie(i);
@@ -1105,6 +1141,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // back was pressed
+
+        setContentView(R.layout.activity_main);
+        SetUP();
     }
 
 

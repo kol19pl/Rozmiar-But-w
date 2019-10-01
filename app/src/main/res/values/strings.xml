@@ -3,29 +3,34 @@
     <string name="damskie">DAMSKIE</string>
     <string name="dzieci_ce">DZIECIĘCE</string>
     <string name="m_skie">MĘSKIE</string>
-    <string name="wybie_rozmiar">Wybież rozmiar:</string>
+    <string name="wybie_rozmiar">Wybierz rozmiar:</string>
     <string name="europa">Europa</string>
     <string name="przelicz">Przelicz</string>
-    <string name="wybie_jednostki">Wybież jednostkię:</string>
+    <string name="wybie_jednostki">Wybierz jednostkę:</string>
     <string name="obs_uga_rozmiar_w_po_rednich">Obsługa rozmiarów pośrednich</string>
     <string name="zamykaj_klawiatur_automatycznie">Zamykaj klawiaturę automatycznie</string>
     <string name="ok">OK</string>
     <string name="funkcja_eksperymentalna">funkcja eksperymentalna</string>
-    <string name="us">US</string>
+    <string name="us" translatable="false">US</string>
     <string name="chiny">CHINY</string>
-    <string name="uk">UK</string>
+    <string name="uk" translatable="false">UK</string>
     <string name="rosja">ROSJA</string>
     <string name="mondopoint">MONDOPOINT</string>
     <string name="japonia">JAPONIA</string>
     <string name="korea">KOREA</string>
     <string name="europarozmiar">Europa:</string>
-    <string name="usrozmiar">US :</string>
+    <string name="usrozmiar" translatable="false">US :</string>
     <string name="chinyrozmiar">CHINY:</string>
     <string name="korearozmiar">KOREA :</string>
     <string name="japoniarozmiar">Japonia :</string>
     <string name="centymetryrozmiar">Centymetry :</string>
-    <string name="ukrozmiar">UK:</string>
+    <string name="ukrozmiar" translatable="false">UK:</string>
     <string name="mondopointrozmiar">Mondopoint :</string>
-    <string name="centymetry">CENTYMETRY</string>
+    <string name="centymetry">"CENTYMETRY "</string>
     <string name="rosjarozmiar">Rosja :</string>
+    <string name="rozmiar_poza_tablica">Rozmiar poza tablicą</string>
+    <string name="to_najmiejszy_rosji">to najmniejszy rozmiar butów dla dorosłych(W Rosji)!!</string>
+    <string name="to_najwiekszy_rosji">to największy rozmiar butów dla dorosłych(W Rosji)!!</string>
+    <string name="funkcja_niedostempna">Funkcja aktualnie niedostępna :(</string>
+    <string name="rozmiar_nie_moze_byc_pusty">Rozmiar nie może być pusty!</string>
 </resources>

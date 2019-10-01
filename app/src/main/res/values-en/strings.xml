@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shoe size</string>
+    <string name="centymetry">CENTIMETERS</string>
+    <string name="centymetryrozmiar">Centimeters :</string>
+    <string name="chiny">CHINA</string>
+    <string name="chinyrozmiar">CHINA:</string>
+    <string name="damskie">LADIES</string>
+    <string name="dzieci_ce">CHILDREN</string>
+    <string name="europa">Europe</string>
+    <string name="europarozmiar">Europe:</string>
+    <string name="funkcja_eksperymentalna">experimental function</string>
+    <string name="funkcja_niedostempna">The function is currently unavailable :(</string>
+    <string name="japonia">JAPAN</string>
+    <string name="japoniarozmiar">Japan:</string>
+    <string name="korea">KOREA</string>
+    <string name="korearozmiar">KOREA :</string>
+    <string name="m_skie">MEN</string>
+    <string name="mondopoint">MONDOPOINT</string>
+    <string name="mondopointrozmiar">Mondopoint :</string>
+    <string name="obs_uga_rozmiar_w_po_rednich">Support for intermediate sizes</string>
+    <string name="ok">OK</string>
+    <string name="przelicz">Recalculate</string>
+    <string name="rosja">RUSSIA</string>
+    <string name="rosjarozmiar">Russia:</string>
+    <string name="rozmiar_nie_moze_byc_pusty">Size cannot be empty!</string>
+    <string name="rozmiar_poza_tablica">Size outside the array</string>
+    <string name="to_najmiejszy_rosji">is the smallest size of adult shoes (In Russia) !!</string>
+    <string name="to_najwiekszy_rosji">is the largest size of adult shoes (In Russia) !!</string>
+    <string name="wybie_jednostki">Choose unit:</string>
+    <string name="wybie_rozmiar">Choose size:</string>
+    <string name="zamykaj_klawiatur_automatycznie">Close the keyboard automatically</string>
+</resources>

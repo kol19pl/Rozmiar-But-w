@@ -22,11 +22,12 @@
     <string name="przelicz">Przelicz</string>
     <string name="rosja">ROSJA</string>
     <string name="rosjarozmiar">Rosja :</string>
-    <string name="uk">UK</string>
-    <string name="ukrozmiar">UK:</string>
-    <string name="us">US</string>
-    <string name="usrozmiar">US :</string>
-    <string name="wybie_jednostki">Wybież jednostkię:</string>
-    <string name="wybie_rozmiar">Wybież rozmiar:</string>
+    <string name="wybie_jednostki">Wybierz jednostkę:</string>
+    <string name="wybie_rozmiar">Wybierz rozmiar:</string>
     <string name="zamykaj_klawiatur_automatycznie">Zamykaj klawiaturę automatycznie</string>
+    <string name="rozmiar_poza_tablica">Rozmiar poza tablicą</string>
+    <string name="funkcja_niedostempna">Funkcja aktualnie niedostępna :(</string>
+    <string name="rozmiar_nie_moze_byc_pusty">Rozmiar nie może być pusty!</string>
+    <string name="to_najmiejszy_rosji">to najmniejszy rozmiar butów dla dorosłych(W Rosji)!!</string>
+    <string name="to_najwiekszy_rosji">to największy rozmiar butów dla dorosłych(W Rosji)!!</string>
 </resources>

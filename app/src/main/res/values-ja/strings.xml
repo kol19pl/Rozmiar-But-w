@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">靴のサイズ</string>
+    <string name="centymetry">センチ</string>
+    <string name="centymetryrozmiar">センチ：</string>
+    <string name="chiny">中国</string>
+    <string name="chinyrozmiar">中国 :</string>
+    <string name="damskie">女子</string>
+    <string name="dzieci_ce">子供</string>
+    <string name="europa">ヨーロッパ</string>
+    <string name="europarozmiar">ヨーロッパ :</string>
+    <string name="funkcja_eksperymentalna">実験関数</string>
+    <string name="funkcja_niedostempna">現在利用できない機能:(</string>
+    <string name="japonia">日本</string>
+    <string name="japoniarozmiar">日本 :</string>
+    <string name="korea">韓国</string>
+    <string name="korearozmiar">韓国 :</string>
+    <string name="m_skie">メンズ</string>
+    <string name="mondopoint">モンドポイント</string>
+    <string name="mondopointrozmiar">モンドポイント :</string>
+    <string name="obs_uga_rozmiar_w_po_rednich">中間サイズのサポート</string>
+    <string name="ok">OK</string>
+    <string name="przelicz">再計算</string>
+    <string name="rosja">ロシア</string>
+    <string name="rosjarozmiar">ロシア :</string>
+    <string name="rozmiar_nie_moze_byc_pusty">サイズを空にすることはできません！</string>
+    <string name="rozmiar_poza_tablica">配列外のサイズ</string>
+    <string name="to_najmiejszy_rosji">大人の靴の最小サイズです（ロシア）!!</string>
+    <string name="to_najwiekszy_rosji">大人の靴の最大サイズです（ロシア）!!</string>
+    <string name="wybie_jednostki">ユニットを選択 ：</string>
+    <string name="wybie_rozmiar">サイズを選択：</string>
+    <string name="zamykaj_klawiatur_automatycznie">キーボードを自動的に閉じる</string>
+</resources>
